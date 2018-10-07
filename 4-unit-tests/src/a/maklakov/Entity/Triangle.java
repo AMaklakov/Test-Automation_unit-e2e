@@ -8,20 +8,6 @@ public class Triangle {
             throw new InvalidParameterException("One of parameters is less or equal to zero");
         }
 
-        boolean canBuild = true;
-
-        if (a + b <= c) {
-            canBuild = false;
-        }
-
-        if (a + c <= b) {
-            canBuild = false;
-        }
-
-        if (b + c <= a) {
-            canBuild = false;
-        }
-
-        return canBuild;
+        return a + b > c && a + c > b && b + c > a;
     }
 }
