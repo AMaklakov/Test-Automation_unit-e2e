@@ -1,15 +1,17 @@
 package a.maklakov;
 
-import a.maklakov.Entity.Triangle;
+import a.maklakov.entity.Triangle;
+import a.maklakov.util.TriangleValidation;
 
 public class Main {
 
     public static void main(String[] args) {
-        boolean canBuild = Triangle.canBuildTriangle(5,5,5);
+        Triangle triangle = new Triangle(5, 5, 5);
+        boolean canBuild = TriangleValidation.canBuildTriangle(triangle);
 
         System.out.println("Can I draw a triangle with sides: 5, 5, 5?");
 
-        if(canBuild) {
+        if (canBuild) {
             System.out.println("--> Yes, you can!");
         } else {
             System.out.println("--> No! =(");

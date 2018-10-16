@@ -1,13 +1,39 @@
-package a.maklakov.Entity;
+package a.maklakov.entity;
 
 import java.security.InvalidParameterException;
 
 public class Triangle {
-    public static boolean canBuildTriangle(double a, double b, double c) throws InvalidParameterException {
-        if (a <= 0 || b <= 0 || c <= 0) {
-            throw new InvalidParameterException("One of parameters is less or equal to zero");
-        }
+    private double a;
+    private double b;
+    private double c;
 
-        return a + b > c && a + c > b && b + c > a;
+    public Triangle(double a, double b, double c) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+    }
+
+    public double getA() {
+        return a;
+    }
+
+    public void setA(double a) {
+        this.a = a;
+    }
+
+    public double getB() {
+        return b;
+    }
+
+    public void setB(double b) {
+        this.b = b;
+    }
+
+    public double getC() {
+        return c;
+    }
+
+    public void setC(double c) {
+        this.c = c;
     }
 }
